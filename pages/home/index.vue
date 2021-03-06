@@ -4,7 +4,7 @@
     <div class="banner">
       <div class="container">
         <h1 class="logo-font">首页</h1>
-        <p>在这里分享你所知道的秘密吧</p>
+        <p>在这里分享你所知道的秘密吧！！！</p>
       </div>
     </div>
   
