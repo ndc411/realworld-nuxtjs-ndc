@@ -4,7 +4,7 @@
     <div class="banner">
       <div class="container">
         <h1 class="logo-font">首页</h1>
-        <p>A place to share your knowledge.</p>
+        <p>在这里分享你所知道的秘密吧</p>
       </div>
     </div>
   
@@ -146,6 +146,9 @@ export default {
     }
   },
   watchQuery: ['page', 'tag', 'tab'],
+  mounted() {
+    console.log('这里是首页啊')
+  },
   computed: {
     ...mapState(['user']),
     totalPage () {
