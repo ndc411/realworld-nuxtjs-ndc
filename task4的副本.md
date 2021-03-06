@@ -277,10 +277,14 @@ props: {
     2. 代码提交到GitHub 远程仓库
 3. 配置 GitHub Access Token
     1. 生成：（https://github.com/settings/tokens）---> developer ---> Personal access token
-        * 选择第一个，该token要对仓库有完全的访问操作权限 --> generate token
-        
-        realworld---6961fda80c2b746e38ed9cf77746fcd9af3fe6ba
-    2. 配置到项目的Secrets中：
+           * 选择第一个，该token要对仓库有完全的访问操作权限 --> generate token 
+           * 注意这个token只显示一次，需要记住：realworld-nuxtjs-ndc----》 27a4e9942394b522a797a9d4d58743b35aec378b
+           
+           realworld---6961fda80c2b746e38ed9cf77746fcd9af3fe6ba
+       2. 配置到要自动部署的项目的Secrets中： 项目地址--setting---secrets--New repository secret
+           * 取名TOKEN，填入value
+       3. 增加GitHub workflows yml文件，文件路径是固定的：.github/workflows/filename.yml,[点击进入相关学习](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
+       4. 注意：这里的host是远程服务器主机对外ip，password是登录远程服务器主机所设置的密码
 
 
 ### 45. 发布部署--自动部署完成
@@ -290,6 +294,9 @@ props: {
     git tag v1.0.0
     git push origin v1.0.0
     ```
+3. 注意：
+    * 不要把没有的文件打包
+    * 即使现在是GitHub为了种族歧视问题而规避了master，使用main作为默认分支，但yml文件中依然要写master分支，否则报错
 
 
 
